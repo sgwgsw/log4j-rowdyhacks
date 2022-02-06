@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="OFF">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="LOGJ2 %d [%-6p] %c{1} – %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="*" level="trace">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <Root level="info">
+            <appenderRef ref="Console" level="info"/>
+        </Root>
+    </Loggers>
+</Configuration>
