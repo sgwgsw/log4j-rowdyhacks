@@ -4,13 +4,9 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="LOGJ2 %d [%-6p] %c{1} – %m%n"/>
         </Console>
-        <appender name="log4jfile" class="org.apache.log4j.FileAppender">
-            <param name="file" value="/opt/tomcat/apache-tomcat-8.0.53/logs/log4jlogs.log"/>
-            <param name="immediateFlush" value="true"/>
-            <param name="threshold" value="debug"/>
-            <param name="append" value="false"/>
+        <RollingFile name="log4jfile" fileName="/opt/tomcat/apache-tomcat-8.0.53/logs/log4jlogs.log">
             <PatternLayout pattern="LOGJ2 %d [%-6p] %c{1} – %m%n"/>
-        </appender>
+        </RollingFile>
     </Appenders>
     <Loggers>
         <Root level="debug">
