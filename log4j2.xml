@@ -5,7 +5,9 @@
             <PatternLayout pattern="LOGJ2 %d [%-6p] %c{1} – %m%n"/>
         </Console>
         <RollingFile name="log4jfile" fileName="/opt/tomcat/apache-tomcat-8.0.53/logs/log4jlogs.log" filePattern="/opt/tomcat/apache-tomcat-8.0.53/logs/log4jlogs-%d{MM-dd-yyyy}-%i.log.gz">
-            <PatternLayout pattern="LOGJ2 %d [%-6p] %c{1} – %m%n"/>
+            <PatternLayout>
+                <pattern>"LOGJ2 %d [%-6p] %c{1} – %m%n"</Pattern>
+            </PatternLayout>   
             <Policies>
                 <TimeBasedTriggeringPolicy />
                 <SizeBasedTriggeringPolicy size="20 MB"/>
