@@ -8,7 +8,7 @@ RUN wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.53/bin/apache-tomc
 RUN tar -xvzf apache-tomcat-8.0.53.tar.gz
 RUN rm apache-tomcat-8.0.53.tar.gz
 RUN cd /opt/tomcat/apache-tomcat-8.0.53/bin
-RUN wget https://repo1.maven.org/maven2/org/apache/tomcat/tomcat-juli/8.0.53/tomcat-juli-8.0.53.jarRUN wget 
+RUN wget https://repo1.maven.org/maven2/org/apache/tomcat/tomcat-juli/8.0.53/tomcat-juli-8.0.53.jar
 RUN mv tomcat-juli-8.0.53.jar tomcat-juli.jar
 RUN cd /opt/tomcat/apache-tomcat-8.0.53/lib
 RUN wget https://repo1.maven.org/maven2/org/apache/tomcat/extras/tomcat-extras-juli-adapters/8.0.53/tomcat-extras-juli-adapters-8.0.53.jar
