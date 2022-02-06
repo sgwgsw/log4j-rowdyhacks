@@ -9,6 +9,7 @@
             <Policies>
                 <TimeBasedTriggeringPolicy />
                 <SizeBasedTriggeringPolicy size="20 MB"/>
+            </Policies>
         </RollingFile>
     </Appenders>
     <Loggers>
