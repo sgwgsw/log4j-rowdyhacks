@@ -14,8 +14,7 @@ RUN cd /opt/tomcat/apache-tomcat-8.0.53/lib
 RUN wget https://repo1.maven.org/maven2/org/apache/tomcat/extras/tomcat-extras-juli-adapters/8.0.53/tomcat-extras-juli-adapters-8.0.53.jar
 RUN mv tomcat-extras-juli-adapters-8.0.53.jar tomcat-juli-adapters.jar
 RUN wget https://github.com/sgwgsw/log4j-rowdyhacks/blob/main/log4j.properties
-RUN cd ..
-RUN cd conf
+RUN cd /opt/tomcat/apache-tomcat-8.0.53/conf
 RUN rm logging.properties
 RUN rm tomcat-users.xml
 RUN wget https://github.com/sgwgsw/log4j-rowdyhacks/blob/main/tomcat-users.xml
