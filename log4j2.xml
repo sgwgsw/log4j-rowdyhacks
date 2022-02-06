@@ -6,9 +6,9 @@
         </Console>
         <RollingFile name="log4jfile" fileName="/opt/tomcat/apache-tomcat-8.0.53/logs/log4jlogs.log" filePattern="/opt/tomcat/apache-tomcat-8.0.53/logs/log4jlogs-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
-                <Pattern>
+                <pattern>
                     "LOG4J2 %d [%-6p] %c{1} – %m%n"
-                </Pattern>
+                </pattern>
             </PatternLayout>   
             <Policies>
                 <TimeBasedTriggeringPolicy />
