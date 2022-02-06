@@ -14,12 +14,13 @@ WORKDIR /opt/tomcat/apache-tomcat-8.0.53/lib
 RUN wget https://repo1.maven.org/maven2/org/apache/tomcat/extras/tomcat-extras-juli-adapters/8.0.53/tomcat-extras-juli-adapters-8.0.53.jar
 RUN mv tomcat-extras-juli-adapters-8.0.53.jar tomcat-juli-adapters.jar
 RUN wget https://raw.githubusercontent.com/sgwgsw/log4j-rowdyhacks/main/log4j2.xml
-RUN mv log4j2.xml /opt/tomcat/apache-tomcat-8.0.53/conf/log4j2.xml
+RUN mv log4j2.xml /opt/tomcat/apache-tomcat-8.0.53/conf
 RUN wget https://raw.githubusercontent.com/sgwgsw/log4j-rowdyhacks/main/setenv.sh
-RUN mv setenv.sh /opt/tomcat/apache-tomcat-8.0.53/bin/setenv.sh
+RUN mv setenv.sh /opt/tomcat/apache-tomcat-8.0.53/bin
 
 WORKDIR /opt/apache
 RUN wget https://archive.apache.org/dist/logging/log4j/2.14.0/apache-log4j-2.14.0-bin.tar.gz
 RUN tar -xvzf apache-log4j-2.14.0-bin.tar.gz
 RUN mv /opt/apache/apache-log4j-2.14.0-bin/log4j-api-2.14.0.jar /opt/tomcat/apache-tomcat-8.0.53/lib
 RUN mv /opt/apache/apache-log4j-2.14.0-bin/log4j-core-2.14.0.jar /opt/tomcat/apache-tomcat-8.0.53/lib
+RUN mv /opt/apache/apache-log4j-2.14.0-bin/log4j-jul-2.14.0.jar /opt/tomcat/apache-tomcat-8.0.53/lib
