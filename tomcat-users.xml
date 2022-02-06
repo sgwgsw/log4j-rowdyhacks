@@ -57,5 +57,5 @@
 	# Hardcoded creds okay here. User has to be created before input fields prompted for at /manager/html
 -->
 <role rolename="manager-gui"/>
-<user username="rowdyhack2022" password="rowdyhack2022" roles="standard,manager-script" />
+<user username="rowdyhack2022" password="rowdyhack2022" roles="manager-gui,standard,manager-script" />
 </tomcat-users>
