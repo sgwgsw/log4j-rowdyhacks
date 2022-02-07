@@ -1,0 +1,25 @@
+services:
+  tomcat-log4j2:
+    build: tomcat-log4j2
+    hostname: tomcat
+    networks:
+      log4jnet:
+        ipv4_address: 172.17.0.2
+    ports:
+      - "8088:8080"
+  netcat:
+    build: netcat-log4j2
+    hostname: netcat
+    networks:
+      log4jnet:
+        ipv4_address: 172.17.0.3
+networks:
+  log4jnet:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.17.0.0/24
+          gateway: 172.17.0.1
