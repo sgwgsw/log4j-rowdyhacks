@@ -1,15 +1,15 @@
+version: "3.7"
+
 services:
   tomcat-log4j2:
-    build: tomcat-log4j2
-    hostname: tomcat
+    image: tomcat-log4j2
+    ports:
+      - "8088:8080"
     networks:
       log4jnet:
         ipv4_address: 172.17.0.2
-    ports:
-      - "8088:8080"
   netcat:
-    build: netcat-log4j2
-    hostname: netcat
+    image: netcat-log4j2
     networks:
       log4jnet:
         ipv4_address: 172.17.0.3
