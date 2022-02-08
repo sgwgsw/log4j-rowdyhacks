@@ -9,7 +9,7 @@ services:
       - log4jnet
   pyhttp-server:
     build: ./pyhttp-server
-    command: python3 -m http.server 10350 --bind 172.19.0.3
+    command: python3 -m http.server 10350
     volumes:
       - ./:/opt
     networks:
