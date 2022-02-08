@@ -3,7 +3,6 @@ version: "3.7"
 services:
   tomcat-log4j2:
     image: tomcat-log4j2
-    command: sh catalina.sh run
     ports:
       - "8088:8080"
     networks:
@@ -13,7 +12,7 @@ services:
     image: pyhttp-log4j2
     command: python3 -m http.server 10350 --bind 172.19.0.3
     volumes:
-      - ./:$pwd
+      - ./:/opt
     networks:
       log4jnet:
         ipv4_address: 172.19.0.3
@@ -25,5 +24,5 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 172.17.0.0/24
-          gateway: 172.17.0.1
+        - subnet: 172.19.0.0/24
+          gateway: 172.19.0.1
