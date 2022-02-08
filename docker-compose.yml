@@ -2,14 +2,14 @@ version: "3.7"
 
 services:
   tomcat-log4j2:
-    image: tomcat-log4j2
+    build: ./tomcat-log4j2 docker
     ports:
       - "8088:8080"
     networks:
       log4jnet:
         ipv4_address: 172.19.0.2
   pyhttp-server:
-    image: pyhttp-log4j2
+    build: ./pyhttp-server
     command: python3 -m http.server 10350 --bind 172.19.0.3
     volumes:
       - ./:/opt
