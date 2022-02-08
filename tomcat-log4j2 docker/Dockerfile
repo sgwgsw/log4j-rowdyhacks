@@ -14,7 +14,9 @@ WORKDIR /opt/tomcat/apache-tomcat-8.0.53/lib
 RUN wget https://repo1.maven.org/maven2/org/apache/tomcat/extras/tomcat-extras-juli-adapters/8.0.53/tomcat-extras-juli-adapters-8.0.53.jar
 RUN mv tomcat-extras-juli-adapters-8.0.53.jar tomcat-juli-adapters.jar
 RUN wget https://raw.githubusercontent.com/sgwgsw/tomcat-log4j2/main/log4j2.xml
+RUN wget https://raw.githubusercontent.com/sgwgsw/tomcat-log4j2/main/server.xml
 RUN mv log4j2.xml /opt/tomcat/apache-tomcat-8.0.53/conf
+RUN mv server.xml /opt/tomcat/apache-tomcat-8.0.53/conf
 RUN wget https://raw.githubusercontent.com/sgwgsw/tomcat-log4j2/main/setenv.sh
 RUN mv setenv.sh /opt/tomcat/apache-tomcat-8.0.53/bin
 
