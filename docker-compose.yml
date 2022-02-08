@@ -3,16 +3,20 @@ version: "3.7"
 services:
   tomcat-log4j2:
     image: tomcat-log4j2
+    command: sh catalina.sh run
     ports:
       - "8088:8080"
     networks:
       log4jnet:
-        ipv4_address: 172.17.0.2
+        ipv4_address: 172.19.0.2
   netcat:
     image: netcat-log4j2
+    command: python3 -m http.server 10350 --bind 172.19.0.3
+    volumes:
+      - ./:$pwd
     networks:
       log4jnet:
-        ipv4_address: 172.17.0.3
+        ipv4_address: 172.19.0.3
 networks:
   log4jnet:
     driver: bridge
