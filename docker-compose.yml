@@ -16,8 +16,12 @@ services:
       - log4jnet
   openldap:
     image: bitnami/openldap:latest
+    ports:
+      - "1389:1389"
     networks:
-      - log4jnet
+      log4jnet:
+        ipv4_address: 172.19.0.19
+      
 networks:
   log4jnet:
     driver: bridge
