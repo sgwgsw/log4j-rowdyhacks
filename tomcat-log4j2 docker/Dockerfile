@@ -25,4 +25,4 @@ RUN mv /opt/apache/apache-log4j-2.14.0-bin/log4j-api-2.14.0.jar /opt/tomcat/apac
 RUN mv /opt/apache/apache-log4j-2.14.0-bin/log4j-core-2.14.0.jar /opt/tomcat/apache-tomcat-8.0.53/lib
 RUN mv /opt/apache/apache-log4j-2.14.0-bin/log4j-jul-2.14.0.jar /opt/tomcat/apache-tomcat-8.0.53/lib
 
-CMD ["/opt/tomcat/apache-tomcat-8.0.53/bin/catalina.sh", "run"]
+WORKDIR /opt/tomcat/apache-tomcat-8.0.53/bin
