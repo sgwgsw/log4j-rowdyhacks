@@ -16,19 +16,9 @@ services:
       - log4jnet
   openldap:
     image: bitnami/openldap:latest
-    ports:
-      - "1389:1389"
     networks:
-      log4jnet:
-        ipv4_address: 172.19.0.19
+      - log4jnet
       
 networks:
   log4jnet:
     driver: bridge
-    driver_opts:
-      com.docker.network.enable_ipv6: "false"
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.19.0.0/24
-          gateway: 172.19.0.1
