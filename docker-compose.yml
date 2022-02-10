@@ -11,7 +11,7 @@ services:
     build: ./pyhttp-server
     command: python3 -m http.server 10350
     volumes:
-      - ./:/opt
+      - ./payload.java:/opt
     networks:
       - log4jnet
   openldap:
