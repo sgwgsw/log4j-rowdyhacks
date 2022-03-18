@@ -118,9 +118,6 @@
              available for use by the Realm.  -->
         <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
                resourceName="UserDatabase"/>
-        <Realm className="org.apache.catalina.realm.JNDIRealm" debug="10"
-                                connectionURL="ldap://openldap:1389"
-                /> 
       </Realm>
 
       <Host name="localhost"  appBase="webapps"
