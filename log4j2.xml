@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN">
+<Configuration status="DEBUG">
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="LOGJ2 %d [%-6p] %c{1} – %m%n"/>
         </Console>
-        <RollingFile name="log4jfile" fileName="/opt/tomcat/apache-tomcat-8.0.53/logs/log4jlogs.log" filePattern="/opt/tomcat/apache-tomcat-8.0.53/logs/log4jlogs-%d{MM-dd-yyyy}-%i.log.gz">
+        <RollingFile name="log4jfile" fileName="/opt/tomcat/logs/log4jlogs.log" filePattern="/opt/tomcat/logs/log4jlogs-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
                 <pattern>
                     "LOG4J2 %d [%-6p] %c{1} – %m%n"
@@ -17,7 +17,7 @@
         </RollingFile>
     </Appenders>
     <Loggers>
-        <Root level="debug">
+        <Root level="DEBUG">
             <appenderRef ref="Console"/>
             <appenderRef ref="log4jfile"/>
         </Root>
