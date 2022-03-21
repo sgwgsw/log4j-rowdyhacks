@@ -4,7 +4,7 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="LOGJ2 %d [%-6p] %c{1} – %m%n"/>
         </Console>
-        <RollingFile name="log4jfile" fileName="/opt/tomcat/logs/log4jlogs.log" filePattern="/opt/tomcat/logs/log4jlogs-%d{MM-dd-yyyy}-%i.log.gz">
+        <RollingFile name="log4jfile" fileName="/usr/local/tomcat/logs/log4jlogs.log" filePattern="/usr/local/tomcat/logs/log4jlogs-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
                 <pattern>
                     "LOG4J2 %d [%-6p] %c{1} – %m%n"
@@ -12,7 +12,7 @@
             </PatternLayout>   
             <Policies>
                 <TimeBasedTriggeringPolicy />
-                <SizeBasedTriggeringPolicy size="20 MB"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
             </Policies>
         </RollingFile>
     </Appenders>
