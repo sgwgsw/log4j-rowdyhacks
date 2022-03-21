@@ -28,7 +28,7 @@ RUN mv setenv.sh /usr/local/tomcat/bin
 # RUN systemctl start tomcat.service
 
 RUN wget https://repo1.maven.org/maven2/org/apache/tomcat/tomcat-juli/8.0.53/tomcat-juli-8.0.53.jar
-RUN mv tomcat-juli-8.0.53.jar /usr/local/tomcat/tomcat-juli.jar
+RUN mv tomcat-juli-8.0.53.jar /usr/local/tomcat/lib/tomcat-juli.jar
 
 RUN wget https://repo1.maven.org/maven2/org/apache/tomcat/extras/tomcat-extras-juli-adapters/8.0.53/tomcat-extras-juli-adapters-8.0.53.jar
 RUN mv tomcat-extras-juli-adapters-8.0.53.jar /usr/local/tomcat/lib/tomcat-juli-adapters.jar
