@@ -22,6 +22,7 @@ RUN rm /usr/local/tomcat/conf/logging.properties
 RUN mv log4j2.xml /usr/local/tomcat/conf
 RUN mv server.xml /usr/local/tomcat/conf
 RUN mv setenv.sh /usr/local/tomcat/bin
+RUN chmod u+x /usr/local/tomcat/bin/setenv.sh
 
 #RUN mv /tmp/tomcat.service /etc/systemd/system/tomcat.service
 # RUN systemctl daemon-reload
@@ -45,4 +46,4 @@ RUN rm apache-log4j-2.14.0-bin.tar.gz
 
 EXPOSE 8080
 
-CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
+CMD ["catalina.sh", "run"]
